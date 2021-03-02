@@ -1,0 +1,56 @@
+.settings {
+    border: 2px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    background: conic-gradient(at 0% 30%, red 10%, yellow 30%, #1e90ff 50%);
+    font-family:Lobster;
+}
+
+.settingsDisplay {
+    width: 90%;
+    height: 50%;
+    border-radius: 10px;
+    border: 2px solid;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonSettings {
+    border: 2px solid;
+    width: 90%;
+    height: 20%;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input_max {
+    margin-bottom: 10px;
+    text-align: center;
+    font-family:Lobster;
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(195,238,79,1) 40%);
+}
+
+.input_start {
+    margin-top: 10px;
+    text-align: center;
+    font-family:Lobster;
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(195,238,79,1) 40%);
+}
+
+.error {
+    margin-top: 10px;
+    text-align: center;
+    border: 2px solid red;
+    background-color: #ef2424;
+}

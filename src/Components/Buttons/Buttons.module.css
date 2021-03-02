@@ -1,0 +1,6 @@
+.buttons {
+    border-radius: 5px;
+    background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(235, 211, 160, 1) 100%);
+    font-family: Lobster;
+    font-size: larger;
+}
