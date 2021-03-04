@@ -37,8 +37,6 @@ const SettingsDisplay = (props: SettingsPropsType) => {
             props.setCount('Incorrect value!')
         } else if (numberMax < props.inputStart) {
             props.setCount('Incorrect value!')
-        } else if (props.inputStart<0){
-            props.setCount('Incorrect value!')
         }
     }
 
@@ -51,7 +49,7 @@ const SettingsDisplay = (props: SettingsPropsType) => {
             props.setChangeReset(true)
         }
         props.setCount('Enter values and press "set"')
-        if (numberStart < 0) {
+        if (numberStart < 0 && props.inputMax > 0) {
             props.setCount('Incorrect value!')
         } else if (numberStart === props.inputMax) {
             props.setCount('Incorrect value!')

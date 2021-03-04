@@ -7,6 +7,7 @@ function App() {
     let [count, setCount] = useState(0)
     let [inputMax, setInputMax] = useState(0)
     let [inputStart, setInputStart] = useState(0)
+
     let [changeIncrement, setChangeIncrement] = useState(false)
     let [changeReset, setChangeReset] = useState(false)
     let [changeSet, setChangeSet] = useState(true)

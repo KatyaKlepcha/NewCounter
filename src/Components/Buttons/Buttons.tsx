@@ -37,6 +37,9 @@ const Buttons = (props: ButtonsPropsType) => {
     const increment = () => {
         if (props.count < props.inputMax) {
             props.setCount(props.count + 1);
+        } else {
+            props.setCount(props.count + 1);
+            props.setChangeIncrement(true)
         }
     }
 

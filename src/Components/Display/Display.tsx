@@ -19,9 +19,6 @@ type DisplayPropsType = {
 
 const Display = (props: DisplayPropsType) => {
 
-    if (props.count === props.inputMax && props.count !== 0) {
-        props.setChangeIncrement(true)
-    }
 
     let inputValidation = props.count === props.inputMax ||
     props.inputStart === props.inputMax ||
