@@ -10,37 +10,31 @@ function App() {
 
     let [changeIncrement, setChangeIncrement] = useState(false)
     let [changeReset, setChangeReset] = useState(false)
-    let [changeSet, setChangeSet] = useState(true)
-
 
 
     return (
         <div className="App">
             <SettingsDisplay count={count}
                              setCount={setCount}
-                             setInputMax={setInputMax}
                              inputStart={inputStart}
-                             inputMax={inputMax}
                              setInputStart={setInputStart}
+                             inputMax={inputMax}
+                             setInputMax={setInputMax}
                              changeIncrement={changeIncrement}
-                             changeReset={changeReset}
                              setChangeIncrement={setChangeIncrement}
+                             changeReset={changeReset}
                              setChangeReset={setChangeReset}
-                             changeSet={changeSet}
-                             setChangeSet={setChangeSet}
                              />
 
             <Display count={count}
                      setCount={setCount}
+                     inputStart={inputStart}
                      inputMax={inputMax}
                      setInputMax={setInputMax}
-                     inputStart={inputStart}
                      changeIncrement={changeIncrement}
                      changeReset={changeReset}
                      setChangeIncrement={setChangeIncrement}
                      setChangeReset={setChangeReset}
-                     changeSet={changeSet}
-                     setChangeSet={setChangeSet}
                      />
         </div>
     );

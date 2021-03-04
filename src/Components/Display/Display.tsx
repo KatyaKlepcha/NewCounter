@@ -5,16 +5,13 @@ import css from "./Display.module.css"
 type DisplayPropsType = {
     count: number
     setCount: (number: any) => void
-    inputMax: number
     inputStart: number
+    inputMax: number
     setInputMax: (number: any) => void
     changeIncrement: boolean
-    changeReset: boolean
     setChangeIncrement: (boolean: boolean) => void
+    changeReset: boolean
     setChangeReset: (boolean: boolean) => void
-    changeSet: boolean
-    setChangeSet: (boolean: boolean) => void
-
 }
 
 const Display = (props: DisplayPropsType) => {
@@ -37,25 +34,25 @@ const Display = (props: DisplayPropsType) => {
                 <Buttons title={'increment'}
                          disabled={props.changeIncrement}
                          count={props.count}
-                         inputStart={props.inputStart}
                          setCount={props.setCount}
-                         setInputMax={props.setInputMax}
+                         inputStart={props.inputStart}
                          inputMax={props.inputMax}
+                         setInputMax={props.setInputMax}
                          changeIncrement={props.changeIncrement}
-                         changeReset={props.changeReset}
                          setChangeIncrement={props.setChangeIncrement}
+                         changeReset={props.changeReset}
                          setChangeReset={props.setChangeReset}
                 />
                 <Buttons title={'reset'}
                          disabled={props.changeReset}
                          count={props.count}
-                         inputStart={props.inputStart}
-                         setInputMax={props.setInputMax}
                          setCount={props.setCount}
+                         inputStart={props.inputStart}
                          inputMax={props.inputMax}
-                         changeReset={props.changeReset}
+                         setInputMax={props.setInputMax}
                          changeIncrement={props.changeIncrement}
                          setChangeIncrement={props.setChangeIncrement}
+                         changeReset={props.changeReset}
                          setChangeReset={props.setChangeReset}
                 />
             </div>
