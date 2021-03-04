@@ -1,22 +1,18 @@
 import React, {ChangeEvent} from 'react';
 import Buttons from "../Buttons/Buttons"
 import css from './SettingsDisplay.module.css'
-import Display from "../Display/Display";
 
 type SettingsPropsType = {
     count: number
     setCount: (number: any) => void
-    setInputMax: (number: any) => void
     inputStart: number
-    inputMax: number
     setInputStart: (number: any) => void
+    inputMax: number
+    setInputMax: (number: any) => void
     changeIncrement: boolean
-    changeReset: boolean
     setChangeIncrement: (boolean: boolean) => void
+    changeReset: boolean
     setChangeReset: (boolean: boolean) => void
-    changeSet: boolean
-    setChangeSet: (boolean: boolean) => void
-
 }
 
 const SettingsDisplay = (props: SettingsPropsType) => {
@@ -37,6 +33,10 @@ const SettingsDisplay = (props: SettingsPropsType) => {
             props.setCount('Incorrect value!')
         } else if (numberMax < props.inputStart) {
             props.setCount('Incorrect value!')
+        } else if (numberMax <= 0 && props.inputStart < 0) {
+            props.setCount('Incorrect value!')
+        } else if (numberMax > 0 && props.inputStart < 0) {
+            props.setCount('Incorrect value!')
         }
     }
 
@@ -54,6 +54,8 @@ const SettingsDisplay = (props: SettingsPropsType) => {
         } else if (numberStart === props.inputMax) {
             props.setCount('Incorrect value!')
         } else if (numberStart > props.inputMax) {
+            props.setCount('Incorrect value!')
+        } else if (props.inputMax < 0 && numberStart < 0) {
             props.setCount('Incorrect value!')
         }
     }
@@ -95,8 +97,8 @@ const SettingsDisplay = (props: SettingsPropsType) => {
                          inputMax={props.inputMax}
                          setInputMax={props.setInputMax}
                          changeIncrement={props.changeIncrement}
-                         changeReset={props.changeReset}
                          setChangeIncrement={props.setChangeIncrement}
+                         changeReset={props.changeReset}
                          setChangeReset={props.setChangeReset}
                 />
             </div>

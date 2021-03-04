@@ -10,8 +10,8 @@ type ButtonsPropsType = {
     inputMax: number
     setInputMax: (number: number) => void
     changeIncrement: boolean
-    changeReset: boolean
     setChangeIncrement: (boolean: boolean) => void
+    changeReset: boolean
     setChangeReset: (boolean: boolean) => void
 }
 
@@ -35,7 +35,7 @@ const Buttons = (props: ButtonsPropsType) => {
     }
 
     const increment = () => {
-        if (props.count < props.inputMax) {
+        if (props.count + 1 < props.inputMax) {
             props.setCount(props.count + 1);
         } else {
             props.setCount(props.count + 1);
